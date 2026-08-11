@@ -65,9 +65,9 @@ lib/
 ## Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/generate-exam.JPEG" width="250" alt="Pantalla de generación de exámenes">
-  <img src="docs/screenshots/exam.JPEG" width="250" alt="Pantalla del examen">
-  <img src="docs/screenshots/results.JPEG" width="250" alt="Pantalla de resultados">
+  <img src="assets/screenshots/generate-exam.JPEG" width="250" alt="Pantalla de generación de exámenes">
+  <img src="assets/screenshots/exam.JPEG" width="250" alt="Pantalla del examen">
+  <img src="assets/screenshots/results.JPEG" width="250" alt="Pantalla de resultados">
 </p>
 
 ### Models
