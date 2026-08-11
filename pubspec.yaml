@@ -1,0 +1,38 @@
+name: study_ai
+description: "A new Flutter project."
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private projects.
+publish_to: 'none'
+
+# Application version
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Iconos estilo iOS
+  cupertino_icons: ^1.0.8
+
+  # Cliente HTTP para consumir la API de OpenRouter
+  http: ^1.2.2
+
+  # Variables de entorno (.env)
+  flutter_dotenv: ^5.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env
+    
