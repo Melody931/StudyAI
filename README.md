@@ -1,52 +1,52 @@
 # StudyAI
 
-StudyAI es una aplicación móvil educativa desarrollada con **Flutter y Dart** que utiliza inteligencia artificial para generar exámenes personalizados a partir de un tema elegido por el usuario.
+StudyAI is an educational mobile application built with **Flutter and Dart** that uses artificial intelligence to generate personalized exams based on a topic chosen by the user.
 
-El proyecto nació como una exploración de cómo integrar servicios de inteligencia artificial en una aplicación móvil y convertir una respuesta generada por IA en una experiencia educativa interactiva.
+The project was created as an exploration of how to integrate artificial intelligence services into a mobile application and turn AI-generated content into an interactive educational experience.
 
-## Funcionalidades
+## Features
 
-StudyAI permite al usuario:
+StudyAI allows users to:
 
-* Introducir un tema que desea estudiar.
-* Configurar las características del examen.
-* Generar preguntas mediante inteligencia artificial.
-* Realizar el examen de forma interactiva.
-* Registrar y evaluar las respuestas.
-* Calcular automáticamente la puntuación.
-* Revisar los resultados y las respuestas correctas.
+* Enter a topic they want to study.
+* Configure the characteristics of the exam.
+* Generate questions using artificial intelligence.
+* Take the exam through an interactive interface.
+* Record and evaluate their answers.
+* Automatically calculate their score.
+* Review their results and correct answers.
 
-### Flujo de la aplicación
+### Application Flow
 
 ```text
-Tema de estudio
+Study Topic
       ↓
-Configuración del examen
+Exam Configuration
       ↓
-Solicitud a la API de IA
+Request to AI API
       ↓
-Generación de preguntas
+Question Generation
       ↓
-Examen interactivo
+Interactive Exam
       ↓
-Evaluación
+Evaluation
       ↓
-Resultados
+Results
 ```
 
-## Tecnologías utilizadas
+## Technologies Used
 
-* **Flutter** — Framework utilizado para desarrollar la aplicación multiplataforma.
-* **Dart** — Lenguaje principal de programación.
-* **OpenRouter API** — Servicio utilizado como intermediario para acceder al modelo de IA encargado de generar los exámenes.
-* **HTTP** — Utilizado para realizar las peticiones a la API.
-* **flutter_dotenv** — Utilizado para gestionar variables de entorno y credenciales de API.
-* **JSON** — Formato utilizado para enviar y recibir información entre la aplicación y la API.
-* **Visual Studio Code** — Entorno utilizado durante el desarrollo.
+* **Flutter** — Framework used to build the cross-platform mobile application.
+* **Dart** — Main programming language.
+* **OpenRouter API** — Service used as an intermediary to access the AI model responsible for generating the exams.
+* **HTTP** — Used to make requests to the AI API.
+* **flutter_dotenv** — Used to manage environment variables and API credentials.
+* **JSON** — Format used to send and receive data between the application and the API.
+* **Visual Studio Code** — Development environment used throughout the project.
 
-## Arquitectura
+## Architecture
 
-La aplicación utiliza una estructura sencilla basada en la separación de responsabilidades:
+The application uses a simple structure based on separation of responsibilities:
 
 ```text
 lib/
@@ -62,90 +62,90 @@ lib/
     └── result_screen.dart
 ```
 
-## Screenshots
-
-<p align="center">
-  <img src="assets/screenshots/generate-exam.JPEG" width="250" alt="Pantalla de generación de exámenes">
-  <img src="assets/screenshots/exam.JPEG" width="250" alt="Pantalla del examen">
-  <img src="assets/screenshots/results.JPEG" width="250" alt="Pantalla de resultados">
-</p>
-
 ### Models
 
-Contiene las estructuras de datos utilizadas por la aplicación, incluyendo los exámenes, preguntas y respuestas.
+Contains the data structures used by the application, including exams, questions, and answers.
 
 ### Services
 
-Contiene la lógica relacionada con servicios externos.
+Contains logic related to external services.
 
-`AiService` se encarga principalmente de comunicarse con la API de inteligencia artificial y transformar las respuestas recibidas en datos que la aplicación pueda utilizar.
+`AiService` is responsible for communicating with the artificial intelligence API and transforming the received responses into data that can be used by the application.
 
 ### Screens
 
-Contiene las diferentes interfaces que forman el flujo principal de StudyAI:
+Contains the different interfaces that make up the main StudyAI flow:
 
-* `GenerateExamScreen` — Configuración y generación del examen.
-* `ExamScreen` — Realización del examen.
-* `ResultScreen` — Visualización de los resultados.
+* `GenerateExamScreen` — Exam configuration and generation.
+* `ExamScreen` — Interactive exam interface.
+* `ResultScreen` — Results and answer review.
 
-## Estado del proyecto
+## Screenshots
 
-**Estado: MVP funcional / Archivado**
+<p align="center">
+  <img src="assets/screenshots/generate-exam.JPEG" width="250" alt="Exam generation screen">
+  <img src="assets/screenshots/exam.JPEG" width="250" alt="Exam screen">
+  <img src="assets/screenshots/results.JPEG" width="250" alt="Results screen">
+</p>
 
-StudyAI alcanzó un MVP funcional capaz de generar y realizar exámenes mediante inteligencia artificial.
+## Project Status
 
-Durante las pruebas se realizaron múltiples exámenes reales para evaluar el comportamiento de la aplicación y detectar problemas de funcionamiento y experiencia de usuario.
+**Status: Functional MVP / Archived**
 
-El proyecto se encuentra actualmente archivado y no está en desarrollo activo.
+StudyAI reached a functional MVP capable of generating and delivering AI-powered exams.
 
-## Limitaciones conocidas
+The application was tested with multiple real exam generations to evaluate its behavior and identify technical and user experience issues.
 
-### Fiabilidad de la conexión
+The project is currently archived and is no longer under active development.
 
-Algunas solicitudes a la API pueden fallar y, en determinadas ocasiones, es necesario realizar varios intentos antes de obtener una respuesta correcta.
+## Known Limitations
 
-Una versión futura podría mejorar este comportamiento mediante:
+### Connection Reliability
 
-* Timeouts más adecuados.
-* Reintentos automáticos.
-* Manejo de errores más robusto.
-* Mejor retroalimentación al usuario.
+Some API requests may fail and, in certain cases, multiple attempts may be required before receiving a successful response.
 
-### Revisión de resultados
+Potential improvements include:
 
-La pantalla de resultados cumple su función, pero la revisión de las respuestas puede resultar poco cómoda.
+* Better timeout configuration.
+* Automatic retry mechanisms.
+* More robust error handling.
+* Improved feedback for users when a request fails.
 
-Una posible mejora sería rediseñar esta sección para presentar las respuestas correctas e incorrectas de una manera más clara e interactiva.
+### Results Review Experience
 
-### Calidad de la generación mediante IA
+The results screen fulfills its basic purpose, but reviewing answers can currently feel somewhat cumbersome.
 
-La generación funciona correctamente con temas generales y conocidos, pero los temas extremadamente específicos pueden producir información incorrecta o incluso contenido inventado.
+A future iteration could redesign this section to present correct and incorrect answers in a clearer and more interactive way.
 
-Entre las posibles soluciones se encuentran:
+### AI Generation Quality
 
-* Mejorar los prompts utilizados para generar los exámenes.
-* Implementar validación adicional del contenido.
-* Incorporar fuentes externas.
-* Explorar arquitecturas basadas en búsqueda o **RAG (Retrieval-Augmented Generation)**.
+The AI generation works well with general and commonly known topics. However, highly specific topics may result in inaccurate or fabricated information.
 
-## Configuración
+Potential improvements include:
 
-Para ejecutar StudyAI localmente es necesario proporcionar las credenciales necesarias para acceder al servicio de IA.
+* Improving the prompts used to generate exams.
+* Adding additional content validation.
+* Integrating external sources.
+* Exploring search-based or **RAG (Retrieval-Augmented Generation)** architectures.
 
-Las claves y credenciales se gestionan mediante variables de entorno y **no forman parte del repositorio**.
+## Setup
 
-Por razones de seguridad, nunca se deben incluir claves de API directamente en el código fuente ni subirlas a GitHub.
+To run StudyAI locally, the required credentials for the AI service must be provided.
 
-## Objetivo del proyecto
+API keys and other credentials are managed through environment variables and **are not included in this repository**.
 
-StudyAI fue desarrollado como un proyecto práctico para explorar:
+For security reasons, API keys should never be hardcoded into the source code or committed to GitHub.
 
-* Desarrollo de aplicaciones móviles con Flutter.
-* Integración de APIs externas.
-* Consumo de servicios de inteligencia artificial.
-* Procesamiento de datos JSON.
-* Separación de responsabilidades dentro de una aplicación.
-* Diseño de una experiencia educativa basada en generación de contenido mediante IA.
+## Project Goals
+
+StudyAI was developed as a practical project to explore:
+
+* Mobile application development with Flutter.
+* Integration with external APIs.
+* Consumption of artificial intelligence services.
+* JSON data processing.
+* Separation of responsibilities within an application.
+* Designing an educational experience around AI-generated content.
 
 ---
 
